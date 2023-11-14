@@ -1,5 +1,5 @@
-aws cloudformation create-stack \
-   --stack-name udacity-workflow-lesson \
-   --template-body file://workflow-and-helpers.yml \
-   --parameters file://workflow-and-helpers-parameters.json \
-   --region us-east-1
+aws cloudformation create-stack --stack-name $1 \
+    --template-body file://$2   \
+    --parameters file://$3  \
+    --capabilities "CAPABILITY_NAMED_IAM"  \
+    --region=us-weast-1
